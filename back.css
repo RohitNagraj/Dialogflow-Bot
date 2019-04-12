@@ -7,8 +7,6 @@
 
 .context {
   width: 100%;
-  height: 100%
-
   position: absolute;
   top: 50vh;
 }
@@ -41,11 +39,9 @@
   list-style: none;
   width: 20px;
   height: 20px;
-  background: #f8c6b4;
+  background: #f0e0db;
   animation: animate 25s linear infinite;
   bottom: -150px;
-}
-
 }
 .circles li:nth-child(1) {
   left: 25%;

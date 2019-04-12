@@ -20,6 +20,14 @@
   display: block;
 }
 
+.icon-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #cabcbc;
