@@ -26,8 +26,7 @@
             };
             recognition.onresult = function (event) {
                 var text = "";
-                for (var i = event.result
-                     ; i < event.results.length; ++i) {
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
                     text += event.results[i][0].transcript;
                 }
                 setInput(text);
@@ -109,7 +108,7 @@
           src="./Logo.png"
           style="width:160%;height:17%;margin-top:-20px; margin-left: -30px; margin-bottom: 50px"
       /></a>
-      <a href="index.html" style="font-size: 22px; margin-bottom: 20px">Shortcuts</a>
+      <a href="#" style="font-size: 22px; margin-bottom: 20px">Shortcuts</a>
       <a style="font-size: 22px; margin-bottom: 20px" href="commands.html">Commands</a>
       <a style="font-size: 22px; margin-bottom: 20px" href="#">About</a>
     </div>
