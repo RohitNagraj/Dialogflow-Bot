@@ -25,7 +25,17 @@
   color: #f1f1f1;
 }
 
+.icon-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
 /* Style page content */
+
 .main {
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
@@ -40,11 +50,9 @@
     font-size: 50%;
   }
 }
-::-webkit-input-placeholder
-{
-  font-size: 60%
-  
+::-webkit-input-placeholder {
+  font-size: 60%;
 }
-::-webkit-scrollbar{
-   width: 0%
+::-webkit-scrollbar {
+  width: 0%;
 }
