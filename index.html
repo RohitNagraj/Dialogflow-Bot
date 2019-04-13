@@ -2,9 +2,96 @@
   <head>
     <title>Lauren</title>
   </head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var accessToken = "9ff7760f6e2c468fbf9c549f760fb4fb";
+        var baseUrl = "https://api.api.ai/v1/";
+        $(document).ready(function () {
+            $("#input").keypress(function (event) {
+                if (event.which == 13) {
+                    event.preventDefault();
+                    send();
+                }
+            });
+            $("#rec").click(function (event) {
+                switchRecognition();
+            });
+        });
+        var recognition;
+        function startRecognition() {
+            recognition = new webkitSpeechRecognition();
+            recognition.onstart = function (event) {
+                updateRec();
+            };
+            recognition.onresult = function (event) {
+                var text = "";
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                    text += event.results[i][0].transcript;
+                }
+                setInput(text);
+                stopRecognition();
+            };
+            recognition.onend = function () {
+                stopRecognition();
+            };
+            recognition.lang = "en-US";
+            recognition.start();
+        }
+        function stopRecognition() {
+            if (recognition) {
+                recognition.stop();
+                recognition = null;
+            }
+            updateRec();
+        }
+        function switchRecognition() {
+            if (recognition) {
+                stopRecognition();
+            } else {
+                startRecognition();
+            }
+        }
+        function setInput(text) {
+            $("#input").val(text);
+            send();
+        }
+        function updateRec() {
+            $("#rec").text(recognition ? "Stop" : "Speak");
+        }
+        function send() {
+            var text = $("#input").val();
+            $.ajax({
+                type: "POST",
+                url: baseUrl + "query?v=20150910",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                headers: {
+                    Authorization: "Bearer " + accessToken
+                },
+                data: JSON.stringify({
+                    query: text,
+                    lang: "en",
+                    sessionId: "somerandomthing"
+                }),
+                success: function (data) {
+                    console.log(data.result.fulfillment.speech);
+                    setResponse(data.result.fulfillment.speech);
+                },
+                error: function () {
+                    setResponse("Internal Server Error");
+                }
+            });
+            setResponse("Loading...");
+        }
+        function setResponse(val) {
+            $("#response").text(val);
+        }
+    </script>
   <link rel="stylesheet" href="redhat.css" />
   <link rel="stylesheet" href="back.css" />
   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -34,10 +121,10 @@
       >
         <span>LAUREN</span>
         <div style="margin-top: -50px">
-          <button class="icon-button" style="float: right"><span class="glyphicon glyphicon-volume-up" aria-hidden="true" style="padding-right: 20px;margin-left: 15px"></span></button>
+          <button id="rec" class="icon-button" style="float: right"><span class="fas fa-microphone" aria-hidden="true" style="padding-right: 20px;margin-left: 15px"></span></button>
 
-          <textarea id="response" style="float:right; height: 46%; width: 25%; margin-left: 20px;overflow:hidden; border-radius: 5px"></textarea>
-        <input id="input" type="text" placeholder="ask anything.." style="width: 25%;height:47%; float: right;border-radius: 5px"></div>
+          <textarea id="response" style="float:right; font-size:60%;height: 46%; width: 25%; margin-left: 20px;overflow:hidden; border-radius: 5px"></textarea>
+        <input id="input" type="text" placeholder="ask anything.." style="width: 25%;font-size:60%;height:47%; float: right;border-radius: 5px"></div>
 
       </div> 
 
