@@ -2,7 +2,7 @@
   <head>
     <title>Lauren</title>
   </head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
         var accessToken = "9ff7760f6e2c468fbf9c549f760fb4fb";
@@ -91,6 +91,7 @@
   <link rel="stylesheet" href="redhat.css" />
   <link rel="stylesheet" href="back.css" />
   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- Optional theme -->
@@ -105,27 +106,25 @@
       <a href="#"
         ><img
           src="./Logo.png"
-          style="width:150%;height:17%;margin-top:-20px; margin-left: -30px; margin-bottom: 50px"
+          style="width:160%;height:17%;margin-top:-20px; margin-left: -30px; margin-bottom: 50px"
       /></a>
-
-      <a href="index.html" style="font-size: 22px; margin-bottom: 20px">Shortcuts</a>
+      <a href="#" style="font-size: 22px; margin-bottom: 20px">Shortcuts</a>
       <a style="font-size: 22px; margin-bottom: 20px" href="commands.html">Commands</a>
       <a style="font-size: 22px; margin-bottom: 20px" href="#">About</a>
-
     </div>
 
     <!-- Page content -->
     <div class="main">
       <div
-        style="background: #111; height:100px; margin-left: -40px;margin-right: -10px
+        style="background: #111; height:100px; margin-left: -20px;margin-right: -10px
         ;color:#F27B51; font-size: 40px; text-align: left; padding-top: 25px"
       >
-        <span class = "bounce animated infinite delay-2s">LAUREN</span>
+        <span>LAUREN</span>
         <div style="margin-top: -50px">
-          <button id = "rec" class="icon-button" style="float: right"><span class="glyphicon glyphicon-volume-up" aria-hidden="true" style="padding-right: 20px;margin-left: 15px"></span></button>
+          <button id="rec" class="icon-button" style="float: right"><span class="fas fa-microphone" aria-hidden="true" style="padding-right: 20px;margin-left: 15px"></span></button>
 
-          <textarea id="response" style="float:right; height: 46%; width: 25%; margin-left: 20px;overflow:hidden; border-radius: 5px"></textarea>
-        <input id="input" type="text" placeholder="ask anything.." style="width: 25%;height:47%; float: right;border-radius: 5px"></div>
+          <textarea id="response" style="float:right; font-size:60%;height: 46%; width: 25%; margin-left: 20px;overflow:hidden; border-radius: 5px"></textarea>
+        <input id="input" type="text" placeholder="ask anything.." style="width: 25%;font-size:60%;height:47%; float: right;border-radius: 5px"></div>
 
       </div> 
 
@@ -228,10 +227,12 @@
           </div>
       
       <br></br>
+      <br>
+      <br>
         <div class="row">
           <div class="col-sm-4">
             <div style="border-bottom:1px solid black"><strong>EDITING</strong></div>
-            <div style="background: #fcfafa">System Information<span style="float:right">Ctrl+X</span></div>
+            <div style="background: #fcfafa">Cut Line<span style="float:right">Ctrl+X</span></div>
             <div style="background: #ffffff">Copy Line<span style="float:right">Ctrl+C</span></div>
             <div style="background: #fcfafa">Delete Line<span style="float:right">Ctrl+Shift+K</span></div>
             <div style="background: #ffffff">Insert Line Below<span style="float:right">Ctrl+Enter</span></div>
