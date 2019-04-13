@@ -14,23 +14,15 @@
 /* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
-  text-decoration: none !important;
+  text-decoration: none;
   font-size: 25px;
   color: #ffffff;
   display: block;
 }
 
-.icon-button {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
-  border: 0;
-  background: transparent;
-}
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #cabcbc;
+  color: #f1f1f1;
 }
 
 /* Style page content */
@@ -45,6 +37,14 @@
     padding-top: 15px;
   }
   .sidenav a {
-    font-size: 18px;
+    font-size: 50%;
   }
+}
+::-webkit-input-placeholder
+{
+  font-size: 60%
+  
+}
+::-webkit-scrollbar{
+   width: 0%
 }
