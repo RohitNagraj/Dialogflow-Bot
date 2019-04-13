@@ -1,0 +1,155 @@
+<html>
+  <head>
+    <title>Lauren</title>
+  </head>
+  <link rel="stylesheet" href="redhat.css" />
+  <link rel="stylesheet" href="back.css" />
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+
+  
+
+  <body>
+    <div class="sidenav">
+      <a href="#"
+        ><img
+          src="./Logo.png"
+          style="width:160%;height:17%;margin-top:-20px; margin-left: -30px; margin-bottom: 50px"
+      /></a>
+      <a href="redhat.html" style="font-size: 22px; margin-bottom: 20px">Shortcuts</a>
+      <a style="font-size: 22px; margin-bottom: 20px" href="commands.html">Commands</a>
+      <a style="font-size: 22px; margin-bottom: 20px" href="#">About</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+      <div
+        style="background: #111; height:100px; margin-left: -20px;margin-right: -10px
+        ;color:#F27B51; font-size: 40px; text-align: left; padding-top: 25px"
+      >
+        <span>LAUREN</span>
+        <div style="margin-top: -50px">
+          <button class="icon-button" style="float: right"><span class="glyphicon glyphicon-volume-up" aria-hidden="true" style="padding-right: 20px;margin-left: 15px"></span></button>
+
+          <textarea id="response" style="float:right; height: 46%; width: 25%; margin-left: 20px;overflow:hidden; border-radius: 5px"></textarea>
+        <input id="input" type="text" placeholder="ask anything.." style="width: 25%;height:47%; float: right;border-radius: 5px"></div>
+
+      </div> 
+
+      
+      <div class="container">
+         <br/>
+        <div class="row" style="margin-top: 40px">
+          <div class="col-sm-4">
+            <div style="border-bottom:1px solid black">SYSTEM  <strong>INFORMATION</strong></div>
+            <div style="background: #fcfafa">Linux System Information<span style="float:right">uname -a</span></div>
+            <div style="background: #ffffff">Kernel release information<span style="float:right">uname-r</span></div>
+            <div style="background: #fcfafa">Version of redhat intalled<span style="float:right">cat /etc/redhat-release</span></div>
+            <div style="background: #ffffff">System running time<span style="float:right">uptime</span></div>
+            <div style="background: #fcfafa">System host name<span style="float:right">hostname</span></div>
+            <div style="background: #ffffff">IP address of host<span style="float:right">hostname -I</span></div>
+            <div style="background: #fcfafa">Calender<span style="float:right">cal</span></div>
+            <div style="background: #ffffff">Online user<span style="float:right">w</span></div>
+            <div style="background: #fcfafa">Who is online<span style="float:right">whoami</span></div>
+
+          </div>
+          <div class="col-sm-4">
+            <div style="border-bottom:1px solid black">HARDWARE  <strong>INFORMATiON</strong></div>
+            <div style="background: #fcfafa">Display in kernel ring buffer<span style="float:right">dmesg</span></div>
+            <div style="background: #ffffff">CPU information<span style="float:right">cat /proc/cpuinfo</span></div>
+            <div style="background: #fcfafa">Memory information<span style="float:right">cat /proc/meminfo</span></div>
+            <div style="background: #ffffff">Free memory<span style="float:right">free -h</span></div>
+            <div style="background: #fcfafa">Display PCI devices<span style="float:right">lspci -tv</span></div>
+            <div style="background: #ffffff">Display USB devices<span style="float:right">lsusb -tv</span></div>
+            <div style="background: #fcfafa">Display DMI/SMBios<span style="float:right">dmidecode</span></div>
+            <div style="background: #ffffff">Disk sda Info<span style="float:right">hdparm -i /dev/sda</span></div>
+            <div style="background: #fcfafa">Speed rest on disk sda<span style="float:right">hdparm -tT /dev/sda</span></div>
+            <div style="background: #ffffff">Unreadable blocks on disk sda<span style="float:right">badblocks -s /dev/sda</span></div>
+          </div>
+          <div class="col-sm-4">
+            <div style="border-bottom:1px solid black">PERFORMANCE  <strong>MONITORING</strong></div>
+            <div style="background: #fcfafa">Top processes<span style="float:right">top</span></div>
+            <div style="background: #ffffff">Interatice process view<span style="float:right">htop</span></div>
+            <div style="background: #fcfafa">processor related statistics<span style="float:right">mpstat 1</span></div>
+            <div style="background: #ffffff">Virtual machine statistics<span style="float:right">vmstat 1</span></div>
+            <div style="background: #fcfafa">I/O statistics<span style="float:right">iostat 1</span></div>
+            <div style="background: #ffffff">last 100 syslog messages<span style="float:right">tail 100 /var/log/messages</span></div>
+            <div style="background: #fcfafa">Display packages on interface<span style="float:right">tcpdump -i etho</span></div>
+            <div style="background: #ffffff">Monitor traffic on port 80<span style="float:right">tcpdump -i etho 'port80'</span></div>
+            <div style="background: #fcfafa">List open files<span style="float:right">lsof</span></div>
+            <div style="background: #ffffff">Open previous<span style="float:right">Ctrl+Shift+Tab</span></div>
+    
+          </div>
+      </div>
+       <br/>
+      <dive class="row">
+          <div class="col-sm-4"10 style=" margin-left: -10px">
+            <div style="border-bottom:1px solid black">FILE AND  <strong>DIRECTORY COMMANDS</strong></div>
+            <div style="background: #fcfafa">list all files<span style="float:right">ls -al</span></div>
+            <div style="background: #ffffff">Present working directory<span style="float:right">pwd</span></div>
+            <div style="background: #fcfafa">Create directory<span style="float:right">mkdir directory</span></div>
+            <div style="background: #ffffff">Remove file<span style="float:right">rm file</span></div>
+            <div style="background: #fcfafa">Remove directory<span style="float:right">rm -r directory</span></div>
+            <div style="background: #ffffff">Force removal of file<span style="float:right">rm -f file</span></div>
+            <div style="background: #fcfafa">Force removal of directory<span style="float:right">rm -rf directory</span></div>
+            <div style="background: #ffffff">Copy file1 to file2<span style="float:right">cp file1 file2</span></div>
+            <div style="background: #fcfafa">Create an empty file<span style="float:right">touch file</span></div>
+            <div style="background: #ffffff">View contects of file<span style="float:right">cat file</span></div>
+            <div style="background: #fcfafa">Browse through a text file<span style="float:right">less file</span></div> 
+          </div>
+          <div class="col-sm-4">
+            <div style="border-bottom:1px solid black">PROCESS  <strong>MANAGEMENT</strong></div>
+            <div style="background: #fcfafa">Current running process<span style="float:right">ps</span></div>
+            <div style="background: #ffffff">Display process informatiom for processname<span style="float:right">ps -ef | grep processname</span></div>
+            <div style="background: #fcfafa">Interative process view<span style="float:right">htop</span></div>
+            <div style="background: #ffffff">Kill process with process ID of pud<span style="float:right">Alt+Enter</span></div>
+            <div style="background: #fcfafa">Kill processname<span style="float:right">killall processname</span></div>
+            <div style="background: #ffffff">Start prgram in the background<span style="float:right">program &</span></div> 
+            <div style="background: #fcfafa">Display background jobs<span style="float:right">fg</span></div>
+            <div style="background: #ffffff">Recent background job<span style="float:right">ps -ef | grep processname</span></div>
+            <div style="background: #fcfafa">brings job to foreground<span style="float:right">fg n</span></div>      
+          </div>
+          <div class="col-sm-4">
+            <div style="border-bottom:1px solid black">INSTALLING  <strong>PACKAGES</strong></div>
+            <div style="background: #fcfafa">Search for package<span style="float:right">yum search keyword</span></div>
+            <div style="background: #ffffff">Install package<span style="float:right">yum install package</span></div>
+            <div style="background: #fcfafa">Install package from a local file<span style="float:right">rpm -i package.rpm</span></div>
+            <div style="background: #ffffff">Uninstall package<span style="float:right">yum remove package</span></div>
+            <div style="background: #fcfafa">Install from source code<span style="float:right">tar zxvf sourcecode.tar.gz</span></div>
+            <div style="background: #ffffff">   .  <span style="float:right">cd sourcecode</span></div>
+            <div style="background: #fcfafa">    . <span style="float:right">./configure</span></div>
+            <div style="background: #ffffff">    .<span style="float:right">make</span></div>
+            <div style="background: #fcfafa">    .<span style="float:right">make install</span></div>
+   
+          </div>
+      
+      <br></br>
+        
+         </div>
+       
+
+
+
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    </div>
+  </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script
+</html>
